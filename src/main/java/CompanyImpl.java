@@ -1,15 +1,16 @@
 import animals.Animal;
+import interfaces.ICompany;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Company {
+public class CompanyImpl implements ICompany {
 
     private String name;
     private List<Animal> companyAnimals;
     private Owner owner;
 
-    public Company(String name, Owner owner) {
+    public CompanyImpl(String name, Owner owner) {
         this.name = name;
         this.companyAnimals = new ArrayList<Animal>();
     }
@@ -28,6 +29,10 @@ public class Company {
 
     public void addCompanyAnimal(Animal animal) {
         this.companyAnimals.add(animal);
+    }
+
+    public void removeCompanyAnimal(Animal animal) {
+        this.companyAnimals.remove(animal);
     }
 }
 

@@ -7,6 +7,7 @@ public abstract class Animal {
     private String breed;
     private boolean isCompanyAnimal;
 
+
     public Animal(String name, int age, String breed, boolean isCompanyAnimal) {
         this.name = name;
         this.age = age;
@@ -35,8 +36,10 @@ public abstract class Animal {
         this.isCompanyAnimal = isCompanyAnimal;
     }
 
+
+
     public String feed() {
-        return this.getName() + " has been fed)";
+        return this.getName() + " has been fed";
     }
 
     public String feed(String food) {

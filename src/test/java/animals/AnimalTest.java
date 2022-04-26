@@ -3,6 +3,7 @@ package animals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static animals.AnimalType.MAMMAL;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class AnimalTest {
@@ -18,4 +19,10 @@ public class AnimalTest {
     public void canGetName(){
         assertThat(dog.getName()).isEqualTo("Lyra");
     }
+
+    @Test
+    public void canGetAnimalType(){
+        assertThat(dog.getAnimalType()).isEqualTo(MAMMAL);
+    }
+
 }

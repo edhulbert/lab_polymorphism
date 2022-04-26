@@ -6,27 +6,33 @@ import java.util.List;
 public class Owner {
 
     private String name;
-    protected List<Animal> allAnimals;
-    protected List<Animal> companyAnimals;
-    private Company company;
+    protected List<Animal> pets;
+    private CompanyImpl company;
 
     public Owner(String name) {
         this.name = name;
-        this.allAnimals = new ArrayList<Animal>();
-//        this.companyAnimals = new ArrayList<Animal>();
+        this.pets = new ArrayList<Animal>();
     }
 
-    public void setCompany(Company company){
+    public void setCompany(CompanyImpl company){
         this.company = company;
+    }
+
+    public List<Animal> getPets() {
+        return this.pets;
     }
 
     public void addPet(Animal animal) {
         if (animal.getIsCompanyAnimal()){
-            allAnimals.add(animal);
+            pets.add(animal);
             company.addCompanyAnimal(animal);
         } else {
-            allAnimals.add(animal);
+            pets.add(animal);
         }
+    }
 
+    public void removePet(Animal animal) {
+        pets.remove(animal);
+        company.removeCompanyAnimal(animal);
     }
 }
