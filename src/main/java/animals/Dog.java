@@ -12,4 +12,8 @@ public class Dog extends Animal{
     public boolean getIsWorkingBreed() {
         return this.isWorkingBreed;
     }
+
+    public String takeForWalk(){
+        return this.getName() + " has been taken for a walk";
+    }
 }

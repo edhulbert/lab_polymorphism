@@ -2,7 +2,12 @@ package animals;
 
 public class Snake extends Animal{
 
-    public Snake(String name, int age, String breed, boolean isCompanyAnimal) {
+    private boolean isVenomous;
+
+    public Snake(String name, int age, String breed, boolean isCompanyAnimal, boolean isVenomous) {
         super(name, age, breed, isCompanyAnimal);
+        this.isVenomous = isVenomous;
     }
+
+
 }

@@ -21,9 +21,9 @@ public class OwnerTest {
 
         frazie.setCompany(frazoo);
         frazie.addPet(lyra = new Dog("Lyra",4,"Labrador",false,true));
-        frazie.addPet(pan = new Cat("Pantaleimon",2,"Ragdoll/Russian Blue", false));
-        frazie.addPet(sherlock = new Cat("Sherlock",7,"Persian", false));
-        frazie.addPet(lola = new Snake("Lola", 9,"Royal Python",true));
+        frazie.addPet(pan = new Cat("Pantaleimon",2,"Ragdoll/Russian Blue", false, false));
+        frazie.addPet(sherlock = new Cat("Sherlock",7,"Persian", false, false));
+        frazie.addPet(lola = new Snake("Lola", 9,"Royal Python",true, false));
         frazie.addPet(beaker = new Chameleon("Beaker", 3,"Panther Chameleon",true));
     }
 

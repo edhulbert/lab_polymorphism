@@ -2,8 +2,13 @@ package animals;
 
 public class Cat extends Animal{
 
-    public Cat(String name, int age, String breed, boolean isCompanyAnimal) {
+    private boolean isLongHair;
+
+    public Cat(String name, int age, String breed, boolean isCompanyAnimal, boolean isLongHair) {
         super(name, age, breed, isCompanyAnimal);
+        this.isLongHair = isLongHair;
     }
+
+
 
 }
