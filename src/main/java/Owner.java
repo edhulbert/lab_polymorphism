@@ -1,4 +1,5 @@
 import animals.Animal;
+import interfaces.ICompany;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,15 +8,19 @@ public class Owner {
 
     private String name;
     protected List<Animal> pets;
-    private CompanyImpl company;
+    private ICompany company;
 
     public Owner(String name) {
         this.name = name;
         this.pets = new ArrayList<Animal>();
     }
 
-    public void setCompany(CompanyImpl company){
+    public void setCompany(ICompany company){
         this.company = company;
+    }
+
+    public ICompany getCompany() {
+        return this.company;
     }
 
     public List<Animal> getPets() {

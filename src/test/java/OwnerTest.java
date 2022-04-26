@@ -1,4 +1,5 @@
 import animals.*;
+import interfaces.ICompany;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -30,6 +31,12 @@ public class OwnerTest {
         frazie.addPet(mabel = new StickInsect("Mabel", 1, "Giant Asian Rainforest Mantis", true));
         frazie.addPet(tigger = new Salamander("Tigger", 2, "Tiger Salamander",true));
 
+    }
+
+    @Test
+    public void canSetCompany() {
+        frazie.setCompany(frazoo);
+        assertThat(frazie.getCompany()).isEqualTo(frazoo);
     }
 
     @Test
